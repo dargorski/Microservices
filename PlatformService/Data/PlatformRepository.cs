@@ -23,7 +23,7 @@ public class PlatformRepository : IPlatformRepository
 
     public Platform GetPlatformById(int id)
     {
-        return _appDbContext.Platforms.FirstOrDefault(platform => platform.Id == id) ?? new Platform();
+        return _appDbContext.Platforms.FirstOrDefault(platform => platform.Id == id);
     }
 
     public void CreatePlatform(Platform platform)
